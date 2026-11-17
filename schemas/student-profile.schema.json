@@ -1,0 +1,13 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"GuXu Student Career Profile",
+  "type":"object",
+  "required":["student","experiences","directions","competition"],
+  "properties":{
+    "student":{"type":"object","required":["name","school","major","year"],"properties":{"name":{"type":"string"},"school":{"type":"string"},"major":{"type":"string"},"year":{"type":"string"},"contact":{"type":"string"}}},
+    "experiences":{"type":"array","items":{"type":"object","required":["situation","action","result"],"properties":{"situation":{"type":"string"},"action":{"type":"string"},"result":{"type":"string"},"feedback":{"type":"string"},"energy":{"type":"string"}}}},
+    "directions":{"type":"array","items":{"type":"object","required":["name","reason","evidence","unknowns"],"properties":{"name":{"type":"string"},"reason":{"type":"string"},"evidence":{"type":"array","items":{"type":"string"}},"unknowns":{"type":"array","items":{"type":"string"}}}}},
+    "competition":{"type":"object","required":["targetCareer","track","goal","actions"],"properties":{"targetCareer":{"type":"string"},"track":{"type":"string"},"goal":{"type":"string"},"actions":{"type":"array","items":{"type":"object","required":["time","action","evidence"],"properties":{"time":{"type":"string"},"action":{"type":"string"},"evidence":{"type":"string"}}}}}},
+    "task":{"type":"object","properties":{"title":{"type":"string"},"brief":{"type":"string"},"signals":{"type":"array","items":{"type":"string"}},"reflection":{"type":"string"}}}
+  }
+}
